@@ -16,12 +16,11 @@ async function startApp() {
     const nuxt = await loadNuxt("dev");
     app.use(nuxt.render);
     build(nuxt);
-    database.authenticate().then(() => {
-      console.log('db connected');
-      app.listen(port, 'localhost');
-    }).catch(error => console.log(error));
+    database.authenticate()
+      .then(() => app.listen(port, 'localhost'))
+      .catch(error => console.error(error));
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 

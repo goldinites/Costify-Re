@@ -33,6 +33,7 @@
     "prettier": "^2.7.1",
     "sass": "^1.55.0",
     "sass-loader": "^10.3.1",
-    "sequelize": "^6.25.0"
+    "sequelize": "^6.25.0",
+    "vuelidate": "^0.7.7"
   }
 }

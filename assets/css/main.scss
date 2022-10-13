@@ -1,0 +1,45 @@
+$dark: #222333;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  background-color: $dark;
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  display: block;
+  padding: 15px 25px;
+  background-color: rgba(255,255,255, 0.1);
+  box-shadow: inset -8px -4px 15px 0 rgb(255 255 255 / 10%);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 8px;
+  color: #000;
+  cursor: pointer;
+}

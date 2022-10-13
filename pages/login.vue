@@ -1,35 +1,23 @@
 <template>
-  <div>
-    <form>
-      <input type="text" placeholder="Логин" v-model="login">
-      <input type="text" placeholder="Пароль" v-model="password">
-      <button @click.prevent="auth">Войти</button>
-    </form>
+  <div class="auth">
+    <Auth/>
+    <div class="auth-links">
+      <NuxtLink to="register">Зарегистрироваться</NuxtLink>
+    </div>
   </div>
 </template>
 
 <script>
+import Auth from "~/components/auth/auth.vue";
+
 export default {
   name: "login",
   layout: "auth",
-  data(){
-    return {
-      login: '',
-      password: ''
-    }
-  },
-  methods: {
-    auth() {
-      let authData = {
-        login : this.login,
-        password: this.password
-      }
-      this.$store.dispatch('auth/auth', authData);
-    }
-  }
+  components: {Auth}
 }
 </script>
-
 <style scoped>
-
+.auth-links {
+  margin-top: 15px;
+}
 </style>

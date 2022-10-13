@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="auth-wrapper">
     <Nuxt/>
   </div>
 </template>
@@ -11,5 +11,10 @@ export default {
 </script>
 
 <style scoped>
-
+  .auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 </style>
